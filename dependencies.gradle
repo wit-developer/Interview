@@ -1,0 +1,75 @@
+def versions = [
+        rxjava2            : '2.2.12',
+        rxandroid2         : '2.1.1',
+        rxprerences2       : '2.0.0',
+        rxpermission       : '0.10.2',
+        rxbinding          : '2.1.1',
+        retrofit2          : '2.6.0',
+        glide              : '4.11.0',
+        viewpager2         : '1.1.0-alpha01',
+        hilt_core: '2.31-alpha',
+        hilt_viewmodel: '1.0.0-alpha03',
+        viewmodel_coroutine: '2.2.0',
+        lifecycle_coroutine: '2.2.0',
+        livedata: '2.2.0',
+        room               : '2.3.0',
+        room_persistence   : '1.1.1',
+        firebase_messaging : '20.2.1',
+        firebase_core      : '17.4.3',
+        firebase_auth      : '19.3.2',
+        firebase_crash     : '2.10.1',
+]
+
+ext {
+    deps = [
+
+            lifecycle : [
+                    extension      : "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle_extension}",
+                    reactivestreams: "androidx.lifecycle:lifecycle-reactivestreams:${versions.lifecycle_extension}"
+            ],
+
+            retrofit2 : [
+                    retrofit       : "com.squareup.retrofit2:retrofit:${versions.retrofit2}",
+                    converter_gson : "com.squareup.retrofit2:converter-gson:${versions.retrofit2}",
+                    adapter_rxjava2: "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit2}"
+            ],
+
+            glide     : [
+                    glide   : "com.github.bumptech.glide:glide:${versions.glide}",
+                    compiler: "com.github.bumptech.glide:compiler:${versions.glide}",
+                    okhttp3 : "com.github.bumptech.glide:okhttp3-integration:${versions.glide}"
+            ],
+
+            viewpager2: [
+                    viewpager2: "androidx.viewpager2:viewpager2:${versions.viewpager2}"
+            ],
+
+            ac: [
+                    viewmodel: "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.viewmodel_coroutine}",
+                    lifecycle: "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle_coroutine}",
+                    livedata: "androidx.lifecycle:lifecycle-livedata-ktx:${versions.livedata}"
+            ],
+
+            room      : [
+                    room                : "androidx.room:room-runtime:${versions.room}",
+                    compiler            : "androidx.room:room-compiler:${versions.room}",
+                    testing             : "androidx.room:room-testing:${versions.room}",
+                    rxjava2             : "androidx.room:room-rxjava2:${versions.room}",
+                    coroutine           : "androidx.room:room-ktx:${versions.room}",
+                    persistence         : "android.arch.persistence.room:runtime:${versions.room_persistence}",
+                    persistence_compiler: "android.arch.persistence.room:compiler:${versions.room_persistence}"
+            ],
+
+            rx        : [
+                    rxjava2               : "io.reactivex.rxjava2:rxjava:${versions.rxjava2}",
+                    rxandroid2            : "io.reactivex.rxjava2:rxandroid:${versions.rxandroid2}",
+                    rxprerences2          : "com.f2prateek.rx.preferences2:rx-preferences:${versions.rxprerences2}",
+                    rxpermission          : "com.github.tbruyelle:rxpermissions:${versions.rxpermission}",
+                    rxbinding             : "com.jakewharton.rxbinding2:rxbinding:${versions.rxbinding}",
+                    rxbinding_support     : "com.jakewharton.rxbinding2:rxbinding-support-v4:${versions.rxbinding}",
+                    rxbinding_appcompat   : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${versions.rxbinding}",
+                    rxbinding_design      : "com.jakewharton.rxbinding2:rxbinding-design:${versions.rxbinding}",
+                    rxbinding_recyclerview: "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:${versions.rxbinding}",
+            ],
+    ]
+}
